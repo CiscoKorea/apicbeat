@@ -1,0 +1,4 @@
+ApicBeat for ELK
+
+Install with go version >= 1.5
+$ go get -u github.com/elastic/beat

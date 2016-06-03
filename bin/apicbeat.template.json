@@ -1,0 +1,360 @@
+{
+	"mappings": {
+		"_default_": {
+			"_all": {
+				"enabled": true,
+				"norms": {
+					"enabled": false
+				}
+			},
+			"dynamic_templates": [
+				{
+					"apictemplateX": {
+						"mapping": {
+							"index": "not_analyzed",
+							"ignore_above": 1024,
+							"doc_values": true,
+							"type": "{dynamic_type}"
+						},
+						"match": "*"
+					}
+				}
+			],
+			"properties": {
+				"@timestamp": {
+					"type": "date"
+				},
+				"desc": {
+					"properties": {
+						"class": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"tenant": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"app": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"epg": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"dn": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"rn": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						}
+					}
+				},
+				"tenant_health": {
+					"properties": {
+						"childAction": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"chng": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"cur": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"maxSev": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"nodeId": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"prev": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"rn": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"status": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"twScore": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"updTs": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"weight": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						}
+					}
+				},
+				"tenant_health_cur": {
+					"type": "integer"
+				},
+				"tenant_endpoint": {
+					"properties": {
+						"childAction": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"contName": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"dn": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"encap": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"id": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"idepdn": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"ip": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"lcC": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"lcOwn": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"mac": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"mcastAddr": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"modTs": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"monPolDn": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"name": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"status": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"uid": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"uuid": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"vmmSrc": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						}
+					}
+				},
+				"tenant_endpoint_dn": {
+					"ignore_above": 1024,
+					"type": "keyword"
+				},
+				"faultinfo": {
+					"properties": {
+						"ack": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"cause": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"changeSet": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"childAction": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"code": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"created": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"delegated": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"descr": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"dn": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"domain": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"highestSeverity": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"lastTransition": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"lc": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"occur": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"origSeverity": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"prevSeverity": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"rule": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"severity": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"status": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"subject": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"type": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						}
+					}
+				},
+				"fvcep": {
+					"properties": {
+						"childAction": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"contName": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"dn": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"encap": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"id": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"idepdn": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"ip": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"lcC": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"lcOwn": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"mac": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"mcastAddr": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"modTs": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"monPolDn": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"name": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"status": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"uid": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"uuid": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						},
+						"vmmSrc": {
+							"ignore_above": 1024,
+							"type": "keyword"
+						}
+					}
+				}
+			}
+		}
+	},
+	"order": 0,
+	"settings": {
+		"index": {
+			"refresh_interval": "5s"
+		}
+	},
+	"template": "apicbeat-*"
+}

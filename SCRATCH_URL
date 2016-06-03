@@ -1,0 +1,6 @@
+
+# LOGIN 
+POST : https://APIC/api/aaaLogin.json
+with json : { "aaaUser" : { "attributes" : { "name" : "admin", "pwd" : "1234Qwer"}}} 
+same as code string : "{ \"aaaUser\" : { \"attributes\" : { \"name\" : \"admin\", \"pwd\" : \"1234Qwer\"}}}"
+response : resp["imdata"][0]["aaaUser"]["attributes"]["token"] =/= HTTP.CACHE["APIC-cached"]
